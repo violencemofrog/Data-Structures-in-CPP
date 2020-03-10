@@ -34,9 +34,9 @@ class Vector {
 		Rank insert(Rank,T const&);//插入
 		int remove(Rank,Rank);//区间删除
 		T remove(Rank);//单一元素删除
-		Rank find(T const&,Rank lo,Rank hi);//区间查找
+		Rank find(T const&,Rank,Rank);//区间查找
 		Rank find(T const&);//整体查找
-		Rank binSearch(T const&,Rank lo,Rank hi);//二分查找（区间）
+		Rank binSearch(T const&,Rank,Rank);//二分查找（区间）
 		Rank binSearch(T const&);//二分查找（整体）
 		void traverse(void (*)(T &));//遍历
 		void sort();//起泡排序
