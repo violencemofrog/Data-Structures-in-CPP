@@ -28,16 +28,21 @@ class Vector {
 		~Vector();
 	
 	//接口函数
-		int size();
-		T get(Rank);
-		void put(Rank,T const&);
-		Rank insert(Rank,T const&);
-		int remove(Rank,Rank);
-		T remove(Rank);
-		Rank find(T const&,Rank,Rank);
-		Rank find(T const&);
-		void traverse(void (*)(T &));
-		int deduplicate();
+		int size();//返回元素数目
+		T get(Rank);//获取指定秩的元素值
+		void put(Rank,T const&);//替换指定秩的元素值
+		Rank insert(Rank,T const&);//插入
+		int remove(Rank,Rank);//区间删除
+		T remove(Rank);//单一元素删除
+		Rank find(T const&,Rank lo,Rank hi);//区间查找
+		Rank find(T const&);//整体查找
+		Rank binSearch(T const&,Rank lo,Rank hi);//二分查找（区间）
+		Rank binSearch(T const&);//二分查找（整体）
+		void traverse(void (*)(T &));//遍历
+		void sort();//起泡排序
+		int disordered();//查询无序度
+		int deduplicate();//无序向量唯一化
+		int uniquify();//有序向量唯一化
 
 	//运算符重载
 		T& operator[](Rank);
